@@ -1,0 +1,186 @@
+Primeira Lista de Fundamentos da Computação - Professor Sena
+
+1.
+a) 22/7
+R: 3.142857142857143
+b) 7%22
+R: 7
+c) 4%16
+R: 4
+d) 7/22
+R: 0.3181818181818182
+e) -4/16
+R: -0.25
+f) 16%-4
+R: 0
+g) 22%7
+R: 1
+h) 16/-4
+R: -4.0
+
+- Pulando as questões envolvendo pseudo-código exclusivamente.
+
+5. Elabore um algoritmo que calcule e imprima a média de um aluno em uma disciplina com as seguintes características: Duas provas (P1 e P2), um trabalho (T) e 5 listas de exercícios (L1..L5). A média será dada por: média = 0,3xP1 + 0,4xP2 + 0,2x(média das listas) + 0,1xT.
+
+p1 = int(input("Nota da P1: "))
+p2 = int(input("Nota da P2: "))
+t = int(input("Nota do trabalho: "))
+l1 = int(input("Nota da primeira lista: "))
+l2 = int(input("Nota da segunda lista: "))
+l3 = int(input("Nota da terceira lista: "))
+l4 = int(input("Nota da quarta lista: "))
+l5 = int(input("Nota da quinta lista: "))
+medlistas = (l1+l2+l3+l4+l5)/5
+media = (0.3*p1) + (0.4*p2) + (0.2*medlistas)
+print("A sua média é: ",media)
+
+7. Desenvolva um algoritmo que receba quatro números inteiros, calcule e mostre a soma desses números.
+
+a = int(input("Primeiro número: "))
+b = int(input("Segundo número: "))
+c = int(input("Terceiro número: "))
+d = int(input("Quarto número: "))
+soma = a+b+c+d
+
+8. Faça um algoritmo que receba três notas, calcule e mostre a média aritmética entre elas.
+
+a = int(input("N1: "))
+b = int(input("N2: "))
+c = int(input("N3: "))
+media = (a+b+c)/3
+
+9. Faça um algoritmo que receba o salário de um funcionário, calcule e mostre o novo salário, sabendo-se que este sofreu um aumento de 25%.
+
+salario = int(input("Insira o seu salário: "))
+aumento = (salario*1.25)
+print("Tendo em vista o aumento de 25%, o seu salário agora é: ","R$",aumento)
+
+10. Faça um algoritmo que, dado o valor de um peso em libras, escreve o valor em gramas desse peso. O programa deve dialogar com o usuário segundo o formato do exemplo abaixo: (1 libra vale 453,59237g)
+Peso (em libras): 4.0
+Resposta: 1814g
+
+pesoemlibras = int(input("Insira o peso em libras: "))
+conversaoparagramas = pesoemlibras*0.45359237
+print(pesoemlibras,"em libras equivale a: ",conversaoparagramas,"g")
+
+11. Faça um algoritmo que converta um comprimento dado em polegadas para centímetros. O programa deve utilizar o diálogo Comprimento em polegadas: e escrever o resultado em um linha da tela com a forma xxxpol = yyycm. (1 pol = 2,54 cm)
+
+polegadas = int(input("Insira o valor em polegadas: "))
+centimetros = polegadas*2.54
+print(pol,"pol = ",centimetros,"cm")
+
+12. Faça um algoritmo que responda a área de um círculo dado o raio, fornecido pelo usuário. Use o valor 3,14159 como uma aproximação de π. (S  = πr2)
+
+r = int(input("Insira o raio: "))
+pi = 3.14159
+s = (pi*r**2)
+
+13. Faça um programa que, dados pelo usuário dois números inteiros m e n, com m > n, escreve os valores de uma tripla Pitagórica (lado1, lado2 e hipotenusa) gerada a partir de m e n, através das 3 fórmulas:
+Lado1 = m2 – n2                 Lado2 = 2mn                      Hipotenusa = m2 + n2
+
+m = int(input("Insira o inteiro m: "))
+n = int(input("Insira o inteiro n"))
+Lado1 = m**2 - n**2
+Lado2 = 2*m*n
+Hipotenusa = m**2 + n**2
+print("Primeiro lado: ",Lado1,"Segundo lado: ",Lado2,"Hipotenusa: ",Hipotenusa)
+
+14. Faça um programa que, dados pelo usuário os três coeficientes a, b e c de uma equação do 2º  grau, escreve os valores das raízes dessa equação.
+
+a = int(input("a: "))
+b = int(input("b: "))
+c = int(input("c: "))
+delta = b**2 - 4*a*c
+x1 = (-b + delta**(1/2))/(2*a)
+x2 = (-b - delta**(1/2))/(2*a)
+print("x¹: ",x1,"e","x²: ",x2)
+
+15. Faça um programa que calcule a quantia total dada uma porção de moedas. O programador deve dialogar com o usuário segundo o formato do exemplo abaixo:
+Número de moedas de 1 Real:			3
+Número de moedas de 50 centavos:		3
+Número de moedas de 25 centavos:		1
+Número de moedas de 10 centavos:		7
+Número de moedas de 5 centavos:	       100
+Número de moedas de 1 centavo:	         13
+Quantia total calculada: R$ 10.58
+
+m1rs = int(input("Insira a quantia de moedas de 1 real: "))
+m50c = int(input("Insira a quantia de moedas de 50 centavos: "))
+m25c = int(input("Insira a quantia de moedas de 25 centavos: "))
+m10c = int(input("Insira a quantia de moedas de 10 centavos: "))
+m5c = int(input("Insira a quantia de moedas de 5 centavos: "))
+m1c = int(input("Insira a quantia de moedas de 1 centavo: "))
+total = (m1rs*1)+(m50c*0.5)+(m25c*0.25)+(m10c*0.1)+(m5c*0.05)+(m1c*0.01)
+print("Quantia total calculada: ","R$",total)
+
+16. Faça um algoritmo que leia os valores de horas, minutos e segundos e transforme tudo para segundo. EX: 3 horas 2minutos 7 segundos	= 10927 segundos
+
+h = int(input("Insira os valores em horas: "))
+min = int(input("Insira os valores em minutos: "))
+sec = int(input("Insira os valores em segundos: "))
+totalsec = h*3600 + min*60 + sec
+print("Os valores inseridos em horas, minutos e segudos equivalem a:",totalsec,"segundos")
+
+17. Faça um algoritmo que leia os valores de anos, meses e dias e imprima tudo em dias.
+
+y = int(input("Insira os anos: "))
+m = int(input("Insira os meses: "))
+d = int(input("Insira os dias: "))
+totaldias = y*365 + m*30 + d
+print("Os valores inseridos em anos, meses e dias correspondem a: ",totaldias,"dias.")
+
+18. Faça um algoritmo que leia o valores em dias e imprima tudo em ano, meses e dias.
+
+d = int(input("Insira os dias: "))
+y = y//365
+m = (d - y*365)//30
+d = (d - y*365 - m*30)
+print("Anos =",y)
+print("Meses =",m)
+print("Dias =",d)
+
+19. Faça um algoritmo que leia os valores em hora, minuto e segundo e imprima tudo em segundo.
+
+h = int(input("Insira as horas: "))
+m = int(input("Insira os minutos: "))
+s = int(input("Insira os segundos: "))
+totalsec = h*3600 + m*60 + s
+print(h,":",m,":",s,"equivalem a",totalsec,"segundos.")
+
+20. Faça um algoritmo que leia a base e a altura de um retângulo e escreva o seu perímetro, a sua área e a sua diagonal.
+
+b = int(input("Insira o valor para a base (b): "))
+h = int(input("Insira o valor para a altura (h): "))
+p = 2*(b+h)
+A = b*h
+d = (b*b + h*h)*(1/2)
+
+21. Um funcionário recebe um salário fixo mais 4% de comissão sobre as suas vendas. Faça um algoritmo que receba o valor do salário fixo do funcionário, o valor das suas vendas e que calcule e mostre o salário final do funcionário.
+
+salariofixo = int(input("Insira o salário do funcionário: "))
+venda = int(input("Insira o valor da venda efetuada pelo funcionário: "))
+salariofinal = salariofixo + venda*0.04
+print("O salário final é R$",salariofinal)
+
+22. João recebeu seu salário e precisa pagar duas contas atrasadas. Como as contas estão atrasadas, João deverá pagar uma multa de 2% sobre cada uma. Faça um algoritmo que leia o valor do salário de João e das contas que ele deve pagar, e que mostre quanto restará do seu salário após o pagamento das contas.
+
+salario = int(input("Insira o salário de João: "))
+conta1 = int(input("Insira o valor da primeira conta: "))
+cont2 = int(input("Insira o valor da segunda conta: "))
+capitalrestante = salario - (conta1+conta1*0.02) - (conta2+conta2*0.02)
+print("João terá R$",capitalrestante,"sobrando.")
+
+23. Faça um algoritmo que leia três notas de um aluno com os seus respectivos pesos e que calcule e escreva a média ponderada dessas notas.
+
+print("Bem-vindo(a), antes de inserir os dados, saiba que as três notas possuem peso 3, 2 e 1, respecivamente.")
+n1 = int(input("Insira a primeira nota: "))
+n2 = int(input("Insira a segunda nota: "))
+n3 = int(input("Insira a segunda nota: "))
+medponderada = (n1*3)+(n2*2)+(n3*1)/3+2+1
+
+24. Faça um algoritmo que leia o salário de um funcionário e o salário mínimo vigente. Calcular e escrever quantos salários mínimos ganha o funcionário
+
+salario = int(input"Insira o seu salário: ")
+salariominimo = 1212
+salariosminimos = salario//1212
+print("Você ganha o equivalente a",salariosminimos,"salários mínimos.")
